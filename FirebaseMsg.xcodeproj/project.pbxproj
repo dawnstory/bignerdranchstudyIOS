@@ -17,6 +17,7 @@
 		635363131EA94A1A00F8BB7C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635363121EA94A1A00F8BB7C /* Item.swift */; };
 		635A8E141EAA471500F6759D /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A8E131EAA471500F6759D /* ItemCell.swift */; };
 		635A8E161EAB9C2800F6759D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A8E151EAB9C2800F6759D /* DetailViewController.swift */; };
+		635A8E181EAC3E6000F6759D /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A8E171EAC3E6000F6759D /* ImageStore.swift */; };
 		63C176DD1EA9546D00FF62C6 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C176DC1EA9546D00FF62C6 /* ItemStore.swift */; };
 		E0AED067C635F5C9AFBEEF53 /* Pods_FirebaseMsg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393BA3524A070015109CF1A8 /* Pods_FirebaseMsg.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		635363121EA94A1A00F8BB7C /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		635A8E131EAA471500F6759D /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		635A8E151EAB9C2800F6759D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		635A8E171EAC3E6000F6759D /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		63C176DC1EA9546D00FF62C6 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		6A142EAAA142E96619211550 /* Pods-FirebaseMsg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseMsg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseMsg/Pods-FirebaseMsg.debug.xcconfig"; sourceTree = "<group>"; };
 		B8D75F8928899616FEC0C478 /* Pods-FirebaseMsg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseMsg.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseMsg/Pods-FirebaseMsg.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				635363121EA94A1A00F8BB7C /* Item.swift */,
 				63C176DC1EA9546D00FF62C6 /* ItemStore.swift */,
 				635A8E131EAA471500F6759D /* ItemCell.swift */,
+				635A8E171EAC3E6000F6759D /* ImageStore.swift */,
 			);
 			path = FirebaseMsg;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				635A8E141EAA471500F6759D /* ItemCell.swift in Sources */,
 				635363111EA9400A00F8BB7C /* ItemsViewController.swift in Sources */,
 				63C176DD1EA9546D00FF62C6 /* ItemStore.swift in Sources */,
+				635A8E181EAC3E6000F6759D /* ImageStore.swift in Sources */,
 				630DDEA31EA697A600B07DD0 /* AppDelegate.swift in Sources */,
 				635A8E161EAB9C2800F6759D /* DetailViewController.swift in Sources */,
 			);

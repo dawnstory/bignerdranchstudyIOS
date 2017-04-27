@@ -8,18 +8,21 @@
 
 import UIKit
 
-class DetailViewController : UIViewController, UITextFieldDelegate {
+class DetailViewController : UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
     
     var item: Item!{
         didSet {
             navigationItem.title = item.name
         }
     }
+    
+    var imageStore: ImageStore!
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -46,6 +49,8 @@ class DetailViewController : UIViewController, UITextFieldDelegate {
         
         valueField.text = numberFormatter.string(from: NSNumber(value: item.valueInDollars))
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
+        let imageToDisplay = imageStore.image(forKey: item.itemKey)
+        imageView.image = imageToDisplay
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,4 +77,25 @@ class DetailViewController : UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    @IBAction func takePictures (_ sender: UIBarButtonItem){
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            imagePicker.sourceType = .camera
+        } else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+       
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageView.image = image
+        
+        imageStore.setImage(image, forKey: item.itemKey)
+        
+        dismiss(animated: true, completion: nil)
+    }
 }
