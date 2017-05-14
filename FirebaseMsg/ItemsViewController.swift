@@ -41,14 +41,9 @@ class ItemsViewController:UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         let item = itemStore.allItmes[indexPath.row]
         
-//        cell.textLabel?.text = item.name
-//        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         cell.nameLabel.text = item.name
         cell.serialName.text  = item.serialNumber
         cell.valueLabel.text = "$\(item.valueInDollars)"
@@ -72,10 +67,6 @@ class ItemsViewController:UITableViewController{
     }
     
     @IBAction func addNewItem(_ sender:UIBarButtonItem){
-//        let lastRow = tableView.numberOfRows(inSection: 0)
-//        let indexPath = IndexPath(row: lastRow, section: 0)
-//        tableView.insertRows(at: [indexPath], with: .automatic)
-      
         let newItem = itemStore.createItem()
         if let index = itemStore.allItmes.index(of: newItem){
             let indexPath = IndexPath(row: index, section: 0)
